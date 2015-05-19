@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCAT</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .jumbotron {
+            background-color: #306ED1;
+            margin-top: 50px;
+            padding: 0;
+        }
+        .jumbotron .container {
+            padding: 48px 0;
+            background: url(img/db.png) no-repeat center right;
+            height: 420px;
+        }
+        .jumbotron .container h2 {
+            font-family: 'Microsoft Yahei Light',SimSun;
+            font-weight: bold;
+            font-size: 36px;
+            color: white;
+            line-height: 1.5;
+        }
+        .jumbotron .container a.a-btn {
+            font-family: 'Microsoft Yahei Light',SimSun;
+            font-weight: bold;
+            font-size: 24px;
+            width: 148px;
+            height: 52px;
+            padding: 0;
+            text-decoration: none;
+            line-height: 47px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            display: inline-block;
+            color: #fff;
+            background: none;
+            border: 2px solid #fff;
+            -webkit-transition: background-color 0.3s linear;
+            transition: background-color 0.3s linear;
+        }
+        .jumbotron .container a.a-btn:hover {
+            background: rgb(107, 107, 255);
+        }
+        .github-btn {
+            vertical-align: middle;
+        }
+        .arr1 {
+            top: 260px;
+            right: 490px;
+            width: 163px;
+            height: 82px;
+            background: url(img/arrow1.png) no-repeat;
+            -webkit-animation: flash-arrow1 linear 8s infinite;
+            animation: flash-arrow1 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr2 {
+            top: 110px;
+            right: 530px;
+            width: 106px;
+            height: 70px;
+            background: url(img/arrow2.png) no-repeat;
+            -webkit-animation: flash-arrow2 linear 8s infinite;
+            animation: flash-arrow2 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr3 {
+            top: 125px;
+            right: 320px;
+            width: 132px;
+            height: 65px;
+            background: url(img/arrow3.png) no-repeat;
+            -webkit-animation: flash-arrow3 linear 8s infinite;
+            animation: flash-arrow3 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr4 {
+            top: 230px;
+            right: 260px;
+            width: 91px;
+            height: 108px;
+            background: url(img/arrow4.png) no-repeat;
+            -webkit-animation: flash-arrow4 linear 8s infinite;
+            animation: flash-arrow4 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        @-webkit-keyframes flash-arrow1{
+            0%{opacity:1;filter:alpha(opacity=100)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:1;filter:alpha(opacity=100)}
+        }
+        @keyframes flash-arrow1{
+            0%{opacity:1;filter:alpha(opacity=100)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:1;filter:alpha(opacity=100)}
+        }
+        @-webkit-keyframes flash-arrow2{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:1;filter:alpha(opacity=100)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow2{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:1;filter:alpha(opacity=100)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @-webkit-keyframes flash-arrow3{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:1;filter:alpha(opacity=100)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow3{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:1;filter:alpha(opacity=100)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @-webkit-keyframes flash-arrow4{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:1;filter:alpha(opacity=100)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow4{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:1;filter:alpha(opacity=100)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        .description {
+            line-height: 2!important;
+            font-family: 'Microsoft Yahei',SimSun;
+        }
+    </style>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">MyCAT</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-left">
+  			<li class="active"><a href="/">Index</a></li>
+            <li><a href="/news/index.html">News</a></li>
+  			<li><a href="https://github.com/MyCATApache/Mycat-download">Download</a></li>
+            <li><a href="https://github.com/MyCATApache/Mycat-doc">Documents</a></li>
+            <li><a href="/activity/index.html">Participation</a></li>
+			<li><a href="http://www.life3721.com" target="_blank">MyCAT BBS</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://item.taobao.com/item.htm?id=44263828402" target="_blank" style="background:url(/img/book.png) no-repeat center left;padding-left:25px;">MyCAT Definitive Guide</a></li>
+              <li><a href="https://github.com/MyCATApache" target="_blank" style="background:url(/img/github.png) no-repeat center left;padding-left:32px;">MyCATApache</a></li>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+		<div class="col-md-12">
+            <h2>Completely Open Source Database Middleware</h2>
+			<h2>Database Cluster for Enterprise Applications</h2>
+            <a href="https://github.com/MyCATApache/Mycat-doc/tree/master/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" target="_blank" class="a-btn">Quick Start</a>
+            <a href="https://github.com/MyCATApache/Mycat-download" target="_blank" class="a-btn">Download</a>
+            <dl>
+                <dd>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=watch&count=true" width="112px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=fork&count=true" width="98px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+                    <a target="_blank" style="margin-left:20px;" href="http://jq.qq.com/?_wv=1027&k=SwVxAd"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="加入MyCAT讨论社区" title="加入MyCAT讨论社区"></a>
+                </dd>
+            </dl>
+        </div>
+        <div class="arr1"></div>
+        <div class="arr2"></div>
+        <div class="arr3"></div>
+        <div class="arr4"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 description">
+		  <h3>Important Notice</h3>
+          <p>Mycat 1.4 alpha release, use the JDBC supports all major databases, performance enhancements and bug fixes, the version is recommended for development projects.</p>
+
+          <h3>What is MyCAT?</h3>
+          <li>Completely open source database cluster, it can replace expensive Oracle cluster.</li>
+          <li>It combines traditional database functionality, and distributed database capabilities.</li>
+          <li>Stand-alone database applications can be moved to the "cloud", without changing any code.</li>
+          <li>The core function is database sharding, maximum support 100 billion rows sharding in one logic table. Database sharding provides many advantages, such as faster reads and writes to the database, improved search response, smaller table sizes, and distribution of tables based on need. </li>
+          <li>The application can use it as a database agents, its backend uses the native MySQL protocol with a number of MySQL servers to communicate, you can use the JDBC protocol to communicate with the majority of mainstream database, and also supports  NoSQL databases such as the Mongodb. The future will support more database types.</li>
+          <li>So the Mycat is a BigSQL, the big data technology based the SQL database.</li>
+		</div>
+        <div class="col-md-6 description">
+			<h3>MyCAT Architecture</h3>
+			<img src="img/arc.png" />
+			<h3>Business Cooperation</h3>
+			<p>With the fast growth of chinese internet services, require more and more enterprises database cluster, which brought MyCAT opportunities for development, but it also brings many challenges. MyCAT has now attracted more than 2,000 developers, they have contributed more than one hundred Mycat technical articles on github, and in order to help users better and faster to use MyCAT, MyCAT community has written <a href="http://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-8793307026.9.fKuC9x&id=44263828402" target="_blank">"MyCAT Definitive Guide"</a>.Although MyCAT greatly simplifies the deployment of database sharding cluster, but considering there are still some special cases, such as the project construction period, enterprises lack enough time and manpower to fully research MyCAT, so in order to better supports all types of enterprises to use Mycat, and to accelerate the progress of project development, MyCAT community organized a strong technical team to provide technical support services, only pay 5,000 yuan every six months, in order to accelerate the development of Mycat, and became the first chinese top-level Apache project.
+			</p><p>Contact Mycat official partners please add QQ: 1584039928 or 1526330277 (Additional information : MyCAT cooperation)</p>
+			
+       </div>
+      </div>
+      <hr>
+       <footer>
+        <p> &copy; Company 2014 MyCat <script language="javascript" type="text/javascript" src="http://js.users.51.la/17554127.js"></script>
+<noscript><a href="http://www.51.la/?17554127" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17554127.asp" style="border:none" /></a></noscript></p>
+      </footer>
+    </div> <!-- /container -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
