@@ -180,7 +180,7 @@
           <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav navbar-left">
-  			<li class="active"><a href="/">Index</a></li>
+  			<li class="active"><a href="/">Home</a></li>
             <li><a href="/news/index.html">News</a></li>
   			<li><a href="https://github.com/MyCATApache/Mycat-download">Download</a></li>
             <li><a href="https://github.com/MyCATApache/Mycat-doc">Documents</a></li>
@@ -198,8 +198,8 @@
     <div class="jumbotron">
       <div class="container">
 		<div class="col-md-12">
-            <h2>Completely Open Source Database Middleware</h2>
-			<h2>Database Cluster for Enterprise Applications</h2>
+            <h2>Completely open source database middleware</h2>
+			<h2>“A Big Database Cluster” oriented to the enterprises</h2>
             <a href="https://github.com/MyCATApache/Mycat-doc/tree/master/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" target="_blank" class="a-btn">Quick Start</a>
             <a href="https://github.com/MyCATApache/Mycat-download" target="_blank" class="a-btn">Download</a>
             <dl>
@@ -220,21 +220,43 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 description">
-		  <h3>Important Notice</h3>
+		  <h3>Notice</h3>
           <p>Mycat 1.4 alpha release, use the JDBC supports all major databases, performance enhancements and bug fixes, the version is recommended for development projects.</p>
 
           <h3>What is MyCAT?</h3>
-          <li>Completely open source database cluster, it can replace expensive Oracle cluster.</li>
-          <li>It combines traditional database functionality, and distributed database capabilities.</li>
-          <li>Stand-alone database applications can be moved to the "cloud", without changing any code.</li>
-          <li>The core function is database sharding, maximum support 100 billion rows sharding in one logic table. Database sharding provides many advantages, such as faster reads and writes to the database, improved search response, smaller table sizes, and distribution of tables based on need. </li>
-          <li>The application can use it as a database agents, its backend uses the native MySQL protocol with a number of MySQL servers to communicate, you can use the JDBC protocol to communicate with the majority of mainstream database, and also supports  NoSQL databases such as the Mongodb. The future will support more database types.</li>
-          <li>So the Mycat is a BigSQL, the big data technology based the SQL database.</li>
-		</div>
+          <li>MyCAT is an Open-Source software, "a big database cluster" oriented to the enterprises.</li>
+          <li>MyCAT is an enforced database which is a replacement for MySQL and support transaction and ACID. Regarded as MySQL cluster of enterprise database, MyCAT can take the place of expensive Oracle cluster.</li>
+          <li>MyCAT is also a new type of SQL Server integrated with the memory cache technology, Nosql technology and HDFS big data. And as a new modern enterprise database product, MyCAT is combined with the traditional database and new distributed data warehouse. </li>
+          <li>In a word, MyCAT is a fresh new middleware of database.</li>
+
+          <h3>Target</h3>
+		  <p>MyCAT's target is to smoothly migrate the current stand-alone database and applications to cloud side with low cost and to solve the bottleneck problem caused by the rapid growth of data storage and business scale.</p>
+
+		  <h3>Key Features</h3>
+		  <li>Supports SQL 92 standard</li>
+          <li>Supports Mysql cluster, used as a Proxy</li>
+          <li>Supports JDBC connection with ORACLE, DB2, SQL Server, simulated as normal MySQL Server connection</li>
+          <li>Supports mysql cluster, percona cluster or mariadb cluster, providing high availability of data fragmentation clusters</li>
+          <li>Supports automatic failover and high availability</li>
+          <li>Supports separation of read and write, dual-master with multi-slave, single-master with multi-master of MySQL model</li>
+          <li>Supports global table, automatically fragment data into multiple nodes for efficient relational query</li>
+          <li>Supports the unique fragmentation strategy based on ER-relation for efficient relational query</li>
+		  <li>Supports multi-platform, easy deployment and implementation</li>
+
+		  <h3>Long-term Plan</h3>
+		  <p>On the basis of Mysql’s support, MyCAT add more support of commercial open-source database, including native support of PosteSQL, FireBird and other open-source databases, as well as indirect support via JDBC of other non-open-source databases such as Oracle, DB2, SQL Server etc. More intelligent self-regulating properties, such as automatic statistical analysis of SQL, automatic creating and adjusting indexes. Based on the frequency of reading and writing, MyCAT automatically optimize caching and backup strategies. Achieve a more comprehensive monitoring and management. Integrated with HDFS, provide SQL commands, load databases into HDFS for rapid analysis. Integrated excellent open-source reporting tools to make MyCAT have data analysis capability.</p>
+        </div>
         <div class="col-md-6 description">
-			<h3>MyCAT Architecture</h3>
+			<h3>Architecture</h3>
 			<img src="img/arc.png" />
-			<h3>Business Cooperation</h3>
+
+            <h3>Adventage</h3>
+            <p>Based on Ali open-source product Cobar, whose stability, reliability, excellent architecture and performance, as well as many mature use-case make MyCAT have a good starting. Standing on the shoulders of giants, MyCAT can be able to go farther.</p>
+            <p>Extensively drawing on the best open-source projects and innovative ideas, which are integrated into the MyCAT’s gene, make MyCAT be ahead of the other current similar open-source projects, even beyond some commercial products.</p>
+			<p>MyCAT behind a strong technical team whose participants are experienced more than five years including some senior software engineer, architect, DBA, etc. Excellent technical team to ensure the product quality of MyCAT.</p>
+			<p>MyCAT does not rely on any commercial company. It’s unlike some open-source projects whose important features is enclosed in its commercial products and making open-source projects like a decoration.</p>
+
+			<h3>Cooperation</h3>
 			<p>With the fast growth of chinese internet services, require more and more enterprises database cluster, which brought MyCAT opportunities for development, but it also brings many challenges. MyCAT has now attracted more than 2,000 developers, they have contributed more than one hundred Mycat technical articles on github, and in order to help users better and faster to use MyCAT, MyCAT community has written <a href="http://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-8793307026.9.fKuC9x&id=44263828402" target="_blank">"MyCAT Definitive Guide"</a>.Although MyCAT greatly simplifies the deployment of database sharding cluster, but considering there are still some special cases, such as the project construction period, enterprises lack enough time and manpower to fully research MyCAT, so in order to better supports all types of enterprises to use Mycat, and to accelerate the progress of project development, MyCAT community organized a strong technical team to provide technical support services, only pay 5,000 yuan every six months, in order to accelerate the development of Mycat, and became the first chinese top-level Apache project.
 			</p><p>Contact Mycat official partners please add QQ: 1584039928 or 1526330277 (Additional information : MyCAT cooperation)</p>
 			
