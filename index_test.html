@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCAT</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .jumbotron {
+            background-color: #306ED1;
+            margin-top: 50px;
+            padding: 0;
+        }
+        .jumbotron .container {
+            padding: 48px 0;
+            background: url(img/db.png) no-repeat center right;
+            height: 420px;
+        }
+        .jumbotron .container h2 {
+            font-family: 'Microsoft Yahei Light',SimSun;
+            font-weight: bold;
+            font-size: 36px;
+            color: white;
+            line-height: 1.5;
+        }
+        .jumbotron .container a.a-btn {
+            font-family: 'Microsoft Yahei Light',SimSun;
+            font-weight: bold;
+            font-size: 24px;
+            width: 148px;
+            height: 52px;
+            padding: 0;
+            text-decoration: none;
+            line-height: 47px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            display: inline-block;
+            color: #fff;
+            background: none;
+            border: 2px solid #fff;
+            -webkit-transition: background-color 0.3s linear;
+            transition: background-color 0.3s linear;
+        }
+        .jumbotron .container a.a-btn:hover {
+            background: rgb(107, 107, 255);
+        }
+        .github-btn {
+            vertical-align: middle;
+        }
+        .arr1 {
+            top: 260px;
+            right: 490px;
+            width: 163px;
+            height: 82px;
+            background: url(img/arrow1.png) no-repeat;
+            -webkit-animation: flash-arrow1 linear 8s infinite;
+            animation: flash-arrow1 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr2 {
+            top: 110px;
+            right: 530px;
+            width: 106px;
+            height: 70px;
+            background: url(img/arrow2.png) no-repeat;
+            -webkit-animation: flash-arrow2 linear 8s infinite;
+            animation: flash-arrow2 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr3 {
+            top: 125px;
+            right: 320px;
+            width: 132px;
+            height: 65px;
+            background: url(img/arrow3.png) no-repeat;
+            -webkit-animation: flash-arrow3 linear 8s infinite;
+            animation: flash-arrow3 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        .arr4 {
+            top: 230px;
+            right: 260px;
+            width: 91px;
+            height: 108px;
+            background: url(img/arrow4.png) no-repeat;
+            -webkit-animation: flash-arrow4 linear 8s infinite;
+            animation: flash-arrow4 linear 8s infinite;
+            position: absolute;
+            display: block;
+        }
+        @-webkit-keyframes flash-arrow1{
+            0%{opacity:1;filter:alpha(opacity=100)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:1;filter:alpha(opacity=100)}
+        }
+        @keyframes flash-arrow1{
+            0%{opacity:1;filter:alpha(opacity=100)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:1;filter:alpha(opacity=100)}
+        }
+        @-webkit-keyframes flash-arrow2{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:1;filter:alpha(opacity=100)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow2{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:1;filter:alpha(opacity=100)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @-webkit-keyframes flash-arrow3{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:1;filter:alpha(opacity=100)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow3{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:1;filter:alpha(opacity=100)}
+            75%{opacity:0;filter:alpha(opacity=0)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @-webkit-keyframes flash-arrow4{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:1;filter:alpha(opacity=100)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        @keyframes flash-arrow4{
+            0%{opacity:0;filter:alpha(opacity=0)}
+            25%{opacity:0;filter:alpha(opacity=0)}
+            50%{opacity:0;filter:alpha(opacity=0)}
+            75%{opacity:1;filter:alpha(opacity=100)}
+            100%{opacity:0;filter:alpha(opacity=0)}
+        }
+        .description {
+            line-height: 2!important;
+            font-family: 'Microsoft Yahei',SimSun;
+        }
+    </style>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">MyCAT</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-left">
+  			<li class="active"><a href="/">首页</a></li>
+            <li><a href="/news/index.html">新闻</a></li>
+  			<li><a href="https://github.com/MyCATApache/Mycat-download">下载</a></li>
+            <li><a href="https://github.com/MyCATApache/Mycat-doc">文档</a></li>
+            <li><a href="/activity/index.html">参与</a></li>
+			<li><a href="http://www.life3721.com" target="_blank">论坛</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://item.taobao.com/item.htm?id=44263828402" target="_blank" style="background:url(/img/book.png) no-repeat center left;padding-left:25px;">MyCAT权威指南</a></li>
+              <li><a href="https://github.com/MyCATApache" target="_blank" style="background:url(/img/github.png) no-repeat center left;padding-left:32px;">MyCATApache</a></li>
+			  <li><a href="/index_en.html">English Website</a></li>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+		<div class="col-md-12">
+            <h2>完全开源的数据库中间件产品</h2>
+			<h2>面向企业应用的大数据库集群</h2>
+            <a href="https://github.com/MyCATApache/Mycat-doc/tree/master/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" target="_blank" class="a-btn">快速上手</a>
+            <a href="https://github.com/MyCATApache/Mycat-download" target="_blank" class="a-btn">下载体验</a>
+            <dl>
+                <dd>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=watch&count=true" width="112px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=fork&count=true" width="98px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+                    <a target="_blank" style="margin-left:20px;" href="http://jq.qq.com/?_wv=1027&k=SwVxAd"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="加入MyCAT讨论社区" title="加入MyCAT讨论社区"></a>
+                </dd>
+            </dl>
+        </div>
+        <div class="arr1"></div>
+        <div class="arr2"></div>
+        <div class="arr3"></div>
+        <div class="arr4"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 description">
+		  <h3>重要通知</h3>
+          <p>Mycat 1.4 alpha 版本发布，JDBC方式支持后端所有主流数据库，性能增强并修复一些Bug ，建议当前开发的项目采用。</p>
+
+          <h3>什么是MyCAT</h3>
+          <li>一个彻底开源的，面向企业应用开发的大数据库集群</li>
+          <li>支持事务、ACID、可以替代MySQL的加强版数据库</li>
+          <li>一个可以视为MySQL集群的企业级数据库，用来替代昂贵的Oracle集群</li>
+          <li>一个融合内存缓存技术、NoSQL技术、HDFS大数据的新型SQL Server</li>
+          <li>结合传统数据库和新型分布式数据仓库的新一代企业级数据库产品</li>
+          <li>一个新颖的数据库中间件产品</li>
+
+          <h3>目标</h3>
+		  <p>低成本的将现有的单机数据库和应用平滑迁移到“云”端，解决数据存储和业务规模迅速增长情况下的数据瓶颈问题。</p>
+
+		  <h3>关键特性</h3>
+		  <li>支持SQL92标准</li>
+          <li>支持MySQL集群，可以作为Proxy使用</li>
+          <li>支持JDBC连接Oracle、DB2、SQL Server，将其模拟为MySQL Server使用</li>
+          <li>支持Galera for MySQL集群，Percona Cluster或者MariaDB cluster</li>
+          <li>提供高可用性数据分片集群，自动故障切换</li>
+          <li>支持读写分离，支持MySQL双主多从，以及一主多从的模式</li>
+          <li>支持全局表，数据自动分片到多个节点，用于高效表关联查询</li>
+          <li>支持独有的基于ER关系的分片策略，实现了高效的表关联查询多平台支持，部署简单</li>
+
+		  <h3>长期规划</h3>
+		  <p>在支持MySQL的基础上，后端增加更多的开源数据库和商业数据库的支持，包括原生支持PosteSQL、FireBird等开源数据库，以及通过JDBC等方式间接支持其他非开源的数据库如Oracle、DB2、SQL Server等实现更为智能的自我调节特性，如自动统计分析SQL，自动创建和调整索引，根据数据表的读写频率，自动优化缓存和备份策略等实现更全面的监控管理功能与HDFS集成，提供SQL命令，将数据库装入HDFS中并能够快速分析集成优秀的开源报表工具，使之具备一定的数据分析的能力。</p>
+        </div>
+        <div class="col-md-6 description">
+			<h3>MyCAT架构</h3>
+			<img src="img/arc.png" />
+
+            <h3>优势</h3>
+            <p>基于阿里开源的Cobar产品而研发，Cobar的稳定性、可靠性、优秀的架构和性能以及众多成熟的使用案例使得MyCAT一开始就拥有一个很好的起点，站在巨人的肩膀上，我们能看到更远。业界优秀的开源项目和创新思路被广泛融入到MyCAT的基因中，使得MyCAT在很多方面都领先于目前其他一些同类的开源项目，甚至超越某些商业产品。</p><p>MyCAT背后有一支强大的技术团队，其参与者都是5年以上资深软件工程师、架构师、DBA等，优秀的技术团队保证了MyCAT的产品质量。</p>
+            <p>MyCAT并不依托于任何一个商业公司，因此不像某些开源项目，将一些重要的特性封闭在其商业产品中，使得开源项目成了一个摆设。</p>
+			
+			<h3>商务合作</h3>
+			<p>随着中国电子商务等互联网业务的不断增长，企业对于数据库集群的需求越来越多，这为MyCAT的发展带来了机遇，同时也带来了很多挑战。由于MyCAT开源社区的开放性，目前已经吸引了来自全国各地2000多名开发志愿者，并在Github上贡献各种开发说明文档上百篇，均可免费下载。另外为了帮助使用者更好更快的掌握MyCAT使用技巧和方法，开源社区特别撰写了<a href="http://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-8793307026.9.fKuC9x&id=44263828402" target="_blank">《MyCAT权威指南》</a>。虽然MyCAT在很大程度上简化了数据库分片集群的开发与部署难度，但考虑到仍然存在一些特殊情况，比如项目工期紧，企业缺乏足够的时间和人力来全面研究MyCAT，因此为了更好的支持各类企业使用Mycat实施项目，加速项目开发进度，如今MyCAT开源社区整合了一支强大的技术团队，以半年最低仅需5000元的赞助合作费用，向社会提供公益性的技术支持服务，以此加速Mycat开源项目的发展，并且成为Apache第一个来自中国的顶级开源项目。
+			</p><p>联系Mycat官方合作请加QQ：1584039928 或 1526330277 （附加说明：MyCAT合作）</p>
+			
+       </div>
+      </div>
+      <hr>
+       <footer>
+        <p>&copy; Company 2014 MyCat <script language="javascript" type="text/javascript" src="http://js.users.51.la/17554127.js"></script>
+<noscript><a href="http://www.51.la/?17554127" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17554127.asp" style="border:none" /></a></noscript></p>
+      </footer>
+    </div> <!-- /container -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
