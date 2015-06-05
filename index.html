@@ -222,9 +222,50 @@
       <div class="row">
         <div class="col-md-6 description">
 		  <h3>重要通知</h3>
+		  <p>Mycat 1.4 beta 版本发布，新增并修复众多功能。</>
 		  <p>Mycat官方论坛地址已更新为：<a href="http://i.mycat.io" target="_blank">i.mycat.io</a> 欢迎大家访问！Mycat社区所打造的IT新生活！</p>
-          <p>Mycat 1.4 alpha 版本发布，JDBC方式支持后端所有主流数据库，性能增强并修复一些Bug ，建议当前开发的项目采用。</p>
-		  
+          
+		  <h3>Mycat 1.4 beta 版本发布</h3>
+          <li>支持start transaction与begin命令开启事务</li>
+          <li>支持多层嵌套or语句，并增加单元测试</li>
+          <li>范围取模分片配置文件</li>
+		  <li>增加范围取模分片配置</li>
+		  <li>在分片规则中添加JCH分片配置</li>
+		  <li>添加跳增一致性哈希分片的测试类</li>
+		  <li>增加跳增一致性哈希分片算法</li>
+		  <li>支持范围求模算法的between路由</li>
+		  <li>支持DESCRIBE和DESC</li>
+		  <li>表名支持引号[`]</li>
+
+		  <h3>Mycat 1.4 beta 改进和修复</h3>
+          <li>优化重复代码逻辑</li>
+          <li>增加对自增序列的非空判断</li>
+          <li>修复distinct的带别名出错的bug</li>
+		  <li>去掉WhereUnit中的parent，没用到</li>
+		  <li>Downgrade JDK from 8 to 7</li>
+		  <li>更新PartitionByJumpConsistentHash.java</li>
+		  <li>去除不必要的cast</li>
+		  <li>进一步改进英语表达</li>
+		  <li>数据库Sequnce 异常的时候返回客户端具体错误信息，如存储过程不存在</li>
+		  <li>修改jdbc的心跳数据，show @@heartbeat</li>
+		  <li>修复aio在高并发时出现的bug</li>
+		  <li>修复关于JDBC方式连接后端连接占满数据库的问题 #312 中的2,3问题</li>
+		  <li>去掉不必要的sysout</li>
+		  <li>修改jdbc连接心跳检查active计算错误，show @@backend没有算jdbc连接</li>
+		  <li>合并数据的时候报nullpointexception错误</li>
+		  <li>修复自增id的insert里面的值被强制转大写的bug</li>
+		  <li>修复insert序列解析错误和序列next value for的大小写与空格支持</li>
+		  <li>修复desc语句导致单元测试卡死bug</li>
+		  <li>修复jdbc心跳bug导致不断创建连接的bug</li>
+		  <li>修复druidmanager引起的jdbc连接失败问题</li>
+		  <li>新增，删除 修改全局表 返回受影响的行问题</li>
+		  <li>修复在hibernate生成的sql别名不一致时报错问题</li>
+		  <li>修复null被当做空串的bug</li>
+		  <li>fix a bug, which resulted in RW seperation is unavailable</li>
+		  <li>文件清理，增加versions.java自动生成的功能，修正show @@versions的输出</li>
+		  <li>增加测试用例：delete of global table route to every datanode defined</li>
+		  <li>全局表的delete和update紧急Bug</li>
+
 		  <h3>开放电商架构平台</h3>
 		  <p>千人参与开源，欢迎更多牛人在退休之前，闪耀一次抱团的攻城狮，这一次要惊艳世界！目前岗位列表，虚席以待！<a href="http://i.mycat.io/forum.php?mod=forumdisplay&fid=42 " target="_blank">查看项目进展</a>，欢迎加入电商架构QQ群：97149266</p>
 		  <li>有名气的电商领域的资深人士（顾问）</li>
