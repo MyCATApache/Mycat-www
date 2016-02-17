@@ -1,262 +1,137 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MYCAT官方网站—中国第一开源分布式数据库中间件</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-        .jumbotron {
-            background-color: #306ED1;
-            margin-top: 50px;
-            padding: 0;
-        }
-        .jumbotron .container {
-            padding: 48px 0;
-            background: url(img/db.png) no-repeat center right;
-            height: 420px;
-        }
-        .jumbotron .container h2 {
-            font-family: 'Microsoft Yahei Light',SimSun;
-            font-weight: bold;
-            font-size: 36px;
-            color: white;
-            line-height: 1.5;
-        }
-        .jumbotron .container a.a-btn {
-            font-family: 'Microsoft Yahei Light',SimSun;
-            font-weight: bold;
-            font-size: 24px;
-            width: 148px;
-            height: 52px;
-            padding: 0;
-            text-decoration: none;
-            line-height: 47px;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 40px;
-            margin-right: 40px;
-            margin-bottom: 40px;
-            display: inline-block;
-            color: #fff;
-            background: none;
-            border: 2px solid #fff;
-            -webkit-transition: background-color 0.3s linear;
-            transition: background-color 0.3s linear;
-        }
-        .jumbotron .container a.a-btn:hover {
-            background: rgb(107, 107, 255);
-        }
-        .github-btn {
-            vertical-align: middle;
-        }
-        .arr1 {
-            top: 260px;
-            right: 490px;
-            width: 163px;
-            height: 82px;
-            background: url(img/arrow1.png) no-repeat;
-            -webkit-animation: flash-arrow1 linear 8s infinite;
-            animation: flash-arrow1 linear 8s infinite;
-            position: absolute;
-            display: block;
-        }
-        .arr2 {
-            top: 110px;
-            right: 530px;
-            width: 106px;
-            height: 70px;
-            background: url(img/arrow2.png) no-repeat;
-            -webkit-animation: flash-arrow2 linear 8s infinite;
-            animation: flash-arrow2 linear 8s infinite;
-            position: absolute;
-            display: block;
-        }
-        .arr3 {
-            top: 125px;
-            right: 320px;
-            width: 132px;
-            height: 65px;
-            background: url(img/arrow3.png) no-repeat;
-            -webkit-animation: flash-arrow3 linear 8s infinite;
-            animation: flash-arrow3 linear 8s infinite;
-            position: absolute;
-            display: block;
-        }
-        .arr4 {
-            top: 230px;
-            right: 260px;
-            width: 91px;
-            height: 108px;
-            background: url(img/arrow4.png) no-repeat;
-            -webkit-animation: flash-arrow4 linear 8s infinite;
-            animation: flash-arrow4 linear 8s infinite;
-            position: absolute;
-            display: block;
-        }
-        @-webkit-keyframes flash-arrow1{
-            0%{opacity:1;filter:alpha(opacity=100)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:1;filter:alpha(opacity=100)}
-        }
-        @keyframes flash-arrow1{
-            0%{opacity:1;filter:alpha(opacity=100)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:1;filter:alpha(opacity=100)}
-        }
-        @-webkit-keyframes flash-arrow2{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:1;filter:alpha(opacity=100)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        @keyframes flash-arrow2{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:1;filter:alpha(opacity=100)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        @-webkit-keyframes flash-arrow3{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:1;filter:alpha(opacity=100)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        @keyframes flash-arrow3{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:1;filter:alpha(opacity=100)}
-            75%{opacity:0;filter:alpha(opacity=0)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        @-webkit-keyframes flash-arrow4{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:1;filter:alpha(opacity=100)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        @keyframes flash-arrow4{
-            0%{opacity:0;filter:alpha(opacity=0)}
-            25%{opacity:0;filter:alpha(opacity=0)}
-            50%{opacity:0;filter:alpha(opacity=0)}
-            75%{opacity:1;filter:alpha(opacity=100)}
-            100%{opacity:0;filter:alpha(opacity=0)}
-        }
-        .description {
-            line-height: 2!important;
-            font-family: 'Microsoft Yahei',SimSun;
-        }
-    </style>
-  </head>
-  <body>
+<!-- saved from url=(0022)MYCAT/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Mycat官方</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
+<title> | MYCAT官方网站—中国第一开源分布式数据库中间件</title>
 
-            <ul class="nav navbar-nav navbar-left">
-  			<li class="active"><a href="/">首页</a></li>
-            <li><a href="/news/index.html">新闻</a></li>
-  			<li><a href="https://github.com/MyCATApache/Mycat-download">下载</a></li>
-            <li><a href="https://github.com/MyCATApache/Mycat-doc">文档</a></li>
-            <li><a href="/activity/index.html">参与</a></li>
-			<li><a href="http://i.mycat.io" target="_blank">论坛</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://item.taobao.com/item.htm?id=44263828402" target="_blank" style="background:url(/img/book.png) no-repeat center left;padding-left:25px;">MYCAT权威指南</a></li>
-              <li><a href="https://github.com/MyCATApache" target="_blank" style="background:url(/img/github.png) no-repeat center left;padding-left:32px;">MYCATApache</a></li>
-			  <li><a href="/index_en.html">English Website</a></li>
-            </ul>
-          </div><!--/.navbar-collapse -->
-        </div>
-      </nav>
+<meta name="author" content="MYCAT">
 
-    <div class="jumbotron">
-      <div class="container">
-		<div class="col-md-12">
-            <h2>完全开源的数据库中间件产品</h2>
-			<h2>面向企业应用的大数据库集群</h2>
-            <a href="https://github.com/MyCATApache/Mycat-doc/tree/master/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97" target="_blank" class="a-btn">快速上手</a>
-            <a href="https://github.com/MyCATApache/Mycat-download" target="_blank" class="a-btn">下载体验</a>
-            <dl>
-                <dd>
-                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=watch&count=true" width="112px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
-                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=fork&count=true" width="98px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
-                    <a target="_blank" style="margin-left:20px;" href="http://jq.qq.com/?_wv=1027&k=SwVxAd"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="加入MyCAT讨论社区" title="加入MyCAT讨论社区"></a>
-                </dd>
-            </dl>
-        </div>
-        <div class="arr1"></div>
-        <div class="arr2"></div>
-        <div class="arr3"></div>
-        <div class="arr4"></div>
-      </div>
-    </div>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 description">
-		  <h3>重要通知</h3>
-		  <p><strong>热烈庆祝MYCAT团队申报项目在2015年第四届全国创新创业大赛（天津赛区）决赛中获胜！！！！！</strong></p>
-		  <p><a href="https://github.com/MyCATApache/Mycat-doc/tree/master/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/1.5" target="_blank">Mycat 1.5有史以来改变最大的版本，正在架构设计中征求大侠参与</a></p>
-		  <p>MYCAT 1.4-RC 版本发布，新增并修复众多功能。</>
-		  <p>MYCAT官方论坛地址已更新为：<a href="http://i.mycat.io" target="_blank">i.mycat.io</a> 欢迎大家访问！MYCAT社区所打造的IT新生活！</p>
+<title>MYCAT</title>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="./resources/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/font-awesome.css">
+<link rel="stylesheet" href="./resources/main.css">
+<!-- Custom styles for this template -->
+<link href="./resources/jumbotron.css" rel="stylesheet">
 
-		  <h3>MYCAT 1.4-RC 版本发布</h3>
-          <li>增加日期范围hash分片算法</li>
-          <li>RELOAD @@CONFIG只reload基本配置，不重新加载数据源，RELOAD @@CONFIG_ALL重加载所有配置</li>
-          <li>支持SequoiaDB</li>
-		  <li>增加mycat私有仓库</li>
-		  <li>添加having 语法支持</li>
+<script type="text/javascript">
+window.onload = function load() {
+var user_name=getCookie('user_name');
+if(user_name==undefined||user_name==null){
+document.getElementById('login').style.display = "";
+document.getElementById('user_info').style.display = "none";
+}else{
+document.getElementById('login').style.display = "none";
+document.getElementById('user_info').style.display = "";
+document.getElementById('user_info').innerHTML='<label style="color: white;text-align: center"><a href="/show/u_info/">'+user_name+'</a></label>&nbsp;&nbsp;&nbsp;<a href="/logout">注销</a>';
+}
+}
+//取cookies函数
+function getCookie(name)
+{
+var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+if(arr != null) return unescape(arr[2]); return null;
+}
+</script>
 
-		  <h3>MYCAT 1.4-RC 改进和修复</h3>
-          <li>支持start transaction与begin命令开启事务</li>
-          <li>修改只考虑可见性，未考虑同步的newCreated变量</li>
-          <li>缓存正则表达式</li>
-		  <li>修复mongodb的acceptsURL</li>
-		  <li>jdbc 驱动 bug</li>
-		  <li>防止拿到连接后，执行sql时连接被后端检查给关闭掉</li>
-		  <li>修改心跳检查bug</li>
-		  <li>修复between and 字段带别名时路由错误的bug</li>
-		  <li>Join Key 不在Select 的第一个字段的bug</li>
-		  <li>解决客户端JDBC连接到管理接口报 unsupported statement 错误</li>
-		  <li>ShareJoin bug</li>
+<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?f49da73317f4d4966f8106c398d8c6fd";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 
-		  <h3>开放电商架构平台</h3>
-		  <p>千人参与开源，欢迎更多牛人在退休之前，闪耀一次抱团的攻城狮，这一次要惊艳世界！目前岗位列表，虚席以待！<a href="http://i.mycat.io/forum.php?mod=forumdisplay&fid=42 " target="_blank">查看项目进展</a>，欢迎加入电商架构QQ群：97149266</p>
-		  <li>有名气的电商领域的资深人士（顾问）</li>
-          <li>首席业务架构师团队（BA）</li>
-          <li>首席技术架构师团队（SA）</li>
-          <li>模块开发的Team Leader（TL）、BTL副手</li>
-          <li>每个模块的首席工程师（首席）</li>
-          <li>UI设计和开发 UI</li>
-          <li>PHP工程师 PHP</li>
-          <li>App工程师 App（可以是andriod/IOS)</li>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://mycat.io/">MYCAT</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+
+
+	<li><a href="https://github.com/MyCATApache/Mycat-download" target="_blank">下载</a></li>
+	<li><a href="./document/mycat1.5.2.pdf" target="_blank">文档</a></li>
+	<li><a href="http://i.mycat.io" target="_blank">论坛</a></li>
+	<!--<li><a href=" https://github.com/MyCATApache/Mycat-Server/wiki">demo</a></li> -->
+	<li><a href="https://github.com/MyCATApache/Mycat-Server/issues/112" target="_blank">使用案例</a></li>	
+	<li><a href="./about.html" target="_blank">关于我们</a></li>
+	<li><a href="./vote" target="_blank">开源之星投票</a></li> 
+	<li><a href="./donate.html" target="_blank">捐赠</a></li>
+
+</ul>
+<div class="navbar-form navbar-right" id="user_info" style="text-align: center; padding-top: 5px; height: 30px; display: none;">
+</div>
+</div><!--/.navbar-collapse -->
+</div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+<div class="container">
+<h1>Mycat 数据库分库分表中间件</h1>
+<p>国内国内最活跃的、性能最好的中间件！</p>
+<p>我们致力于开发高性能的开源中间件而努力！</p>
+<p></p>
+<p>
+<a class="btn btn-info btn-lg" role="button" href="./document/mycat1.5.2.pdf">Mycat权威指南 »</a>
+<a class="btn btn-primary btn-lg" role="button" href="https://github.com/MyCATApache/Mycat-download">下载 »</a>
+<a class="btn btn-primary btn-lg" role="button" href="https://github.com/MyCATApache/Mycat-Server/wiki">start »</a>
+</p>
+
+<dl>
+		<dd>
+			<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=watch&count=true" width="112px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+			<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=MyCATApache&repo=MyCAT-Server&type=fork&count=true" width="98px" height="20px" frameborder="0" allowtransparency="true" scrolling="0"></iframe>
+			<a target="_blank" style="margin-left:20px;" href="http://shang.qq.com/wpa/qunwpa?idkey=4d0278989d5210cafcdeb639bb830374ab4b6a1d45e7ef3ac2f9017b007e7dd6"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="加入MyCAT讨论社区" title="加入MyCAT讨论社区"></a>
+		</dd>
+	</dl>
+</div>
+</div>
+
+<div class="container body">
+<!-- Example row of columns -->
+
+<div class="row">
+<div class="col-md-6">
+<h2>Mycat关键特性</h2>
+<h3>关键特性</h3>
+		  <li>支持SQL92标准</li>
+          <li>遵守Mysql原生协议，跨语言，跨平台，跨数据库的通用中间件代理。</li>
+          <li>基于心跳的自动故障切换，支持读写分离，支持MySQL主从，以及galera cluster集群。</li>
+          <li>支持Galera for MySQL集群，Percona Cluster或者MariaDB cluster</li>
+          <li>基于Nio实现，有效管理线程，高并发问题。</li>
+          <li>支持数据的多片自动路由与聚合，支持sum,count,max等常用的聚合函数。</li>
+          <li>支持单库内部任意join，支持跨库2表join，甚至基于caltlet的多表join。</li>
+          <li>支持通过全局表，ER关系的分片策略，实现了高效的多表join查询。</li>
+          <li>支持多租户方案。</li>
+		  <li>支持分布式事务（弱xa）。</li>
+		  <li>支持全局序列号，解决分布式下的主键生成问题。</li>
+		  <li>分片规则丰富，插件化开发，易于扩展。</li>
+		  <li>强大的web，命令行监控。</li>
+		  <li>支持前端作为mysq通用代理，后端JDBC方式支持Oracle、DB2、SQL Server 、 mongodb 、巨杉。</li>
+		  <li>支持密码加密</li>
+                  <li>支持服务降级</li>
+		  <li>支持IP白名单</li>
+		  <li>支持SQL黑名单、sql注入攻击拦截</li>
+                  <li>支持分表（1.6）/li>
+		  <li>集群基于ZooKeeper管理，在线升级，扩容，智能优化，大数据处理（2.0开发版）。</li>
 
           <h3>什么是MYCAT</h3>
           <li>一个彻底开源的，面向企业应用开发的大数据库集群</li>
@@ -271,54 +146,114 @@
           <li>支持对Mycat的JVM内存提供监控服务</li>
           <li>支持对线程的监控</li>
           <li>支持对操作系统的CPU、内存、磁盘、网络的监控</li>
-		  <img src="img/mycatweb.png" />
+		  <img src="img/mycateye1.png" />
 
           <h3>目标</h3>
 		  <p>低成本的将现有的单机数据库和应用平滑迁移到“云”端，解决数据存储和业务规模迅速增长情况下的数据瓶颈问题。</p>
 
-		  <h3>关键特性</h3>
-		  <li>支持SQL92标准</li>
-          <li>支持MySQL集群，可以作为Proxy使用</li>
-          <li>支持JDBC连接Oracle、DB2、SQL Server，将其模拟为MySQL Server使用</li>
-          <li>支持Galera for MySQL集群，Percona Cluster或者MariaDB cluster</li>
-          <li>提供高可用性数据分片集群，自动故障切换</li>
-          <li>支持读写分离，支持MySQL双主多从，以及一主多从的模式</li>
-          <li>支持全局表，数据自动分片到多个节点，用于高效表关联查询</li>
-          <li>支持独有的基于ER关系的分片策略，实现了高效的表关联查询多平台支持，部署简单</li>
 
-		  <h3>长期规划</h3>
-		  <p>在支持MySQL的基础上，后端增加更多的开源数据库和商业数据库的支持，包括原生支持PosteSQL、FireBird等开源数据库，以及通过JDBC等方式间接支持其他非开源的数据库如Oracle、DB2、SQL Server等实现更为智能的自我调节特性，如自动统计分析SQL，自动创建和调整索引，根据数据表的读写频率，自动优化缓存和备份策略等实现更全面的监控管理功能与HDFS集成，提供SQL命令，将数据库装入HDFS中并能够快速分析集成优秀的开源报表工具，使之具备一定的数据分析的能力。</p>
-        </div>
-        <div class="col-md-6 description">
-			 <h3>最新公告</h3>
-			 <p>2015年8月下旬，MYCAT开源社区与国内某家大型互联网集团达成合作协议。社区核心团队将为该集团在数据库中间件MYCAT相关项目实施过程中提供技术架构咨询服务。此项合作是MYCAT开源社区与企业合作模式创新中的里程碑。继《MYCAT权威指南》电子书众筹模式大获成功之后，MYCAT开源社区“O2O在线技术支持服务”模式再次得到市场认可。</p>
 
-			 <h3>MYCAT典型案例</h3>
-			<img src="img/mycatcase2.png" />
+		  <h3>1.5版本架构</h3>
+		  <img src="img/mycat2_0.png" />
 
-			<h3>MYCAT架构</h3>
-			<img src="img/arc.png" />
+		  <p>MYCAT官方论坛地址已更新为：<a href="http://i.mycat.io" target="_blank">i.mycat.io</a> 欢迎大家访问！MYCAT社区所打造的IT新生活！</p>
 
-            <h3>优势</h3>
+		  <h3>长期规划2.0</h3>
+          <li>完全实现分布式事务，完全的支持分布式。</li>
+		  <li>通过Mycat web（eye）完成可视化配置，及智能监控，自动运维。</li>
+		  <li>通过mysql 本地节点，完整的解决数据扩容难度，实现自动扩容机制，解决扩容难点。</li>
+		  <li>支持基于zookeeper的主从切换及Mycat集群化管理。</li>
+		  <li>通过Mycat Balance 替代第三方的Haproxy，LVS等第三方高可用，完整的兼容Mycat集群节点的动态上下线。</li>
+		  <li>接入Spark等第三方工具，解决数据分析及大数据聚合的业务场景。</li>
+		  <li>通过Mycat智能优化，分析分片热点，提供合理的分片建议，索引建议，及数据切分实时业务建议。</li>
+
+          <h3>优势</h3>
             <p>基于阿里开源的Cobar产品而研发，Cobar的稳定性、可靠性、优秀的架构和性能以及众多成熟的使用案例使得MYCAT一开始就拥有一个很好的起点，站在巨人的肩膀上，我们能看到更远。业界优秀的开源项目和创新思路被广泛融入到MYCAT的基因中，使得MYCAT在很多方面都领先于目前其他一些同类的开源项目，甚至超越某些商业产品。</p><p>MYCAT背后有一支强大的技术团队，其参与者都是5年以上资深软件工程师、架构师、DBA等，优秀的技术团队保证了MYCAT的产品质量。</p>
             <p>MYCAT并不依托于任何一个商业公司，因此不像某些开源项目，将一些重要的特性封闭在其商业产品中，使得开源项目成了一个摆设。</p>
+
+		  
+<p>
+</div>
+
+
+<div class="col-md-4">
+<h2>重要下载</h2>
+<strong>ubuntu:14.04 | centos:7</strong>
+<p>
+	  <li><a href="https://github.com/MyCATApache/Mycat-download/tree/master/2.0-dev" target="_blank">Mycat-server-2.0-dev 开发版本</a></li>
+	  <li><a href="https://github.com/MyCATApache/Mycat-download/tree/master/1.5-ALPHA" target="_blank">Mycat-server-1.5 ALPHA版本</a></li>
+	  <li><a href="https://github.com/MyCATApache/Mycat-download/tree/master/1.4-RELEASE" target="_blank">Mycat-server-1.4-release 版本发布</a></li>
+	  <li><a href="https://github.com/MyCATApache/Mycat-download/tree/master/1.3.0.3-release" target="_blank">Mycat-server-1.3-release 版本发布</a></li>
+
+	  <li><a href="https://github.com/MyCATApache/Mycat-download/tree/master/mycat-web-1.0" target="_blank">Mycat-web(eye) 版本发布</a></li>
+<a class="btn btn-default" href="https://github.com/MyCATApache/Mycat-download" role="button">更多下载 »</a></p>
+</div>
+
+
+
+<div class="col-md-5">
+            <h3>MYCAT架构</h3>
+			<img src="img/arc.png" />
 			
-			<h3>技术支持</h3>
+			<h3>企业技术支持服务 </h3>
 			<p>随着中国电子商务等互联网业务的不断增长，企业对于数据库集群的需求越来越多，这为MYCAT的发展带来了机遇，同时也带来了很多挑战。由于MYCAT开源社区的开放性，目前已经吸引了来自全国各地2000多名开发志愿者，并在Github上贡献各种开发说明文档上百篇，均可免费下载。另外为了帮助使用者更好更快的掌握MYCAT使用技巧和方法，开源社区特别撰写了<a href="http://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-8793307026.9.fKuC9x&id=44263828402" target="_blank">《MYCAT权威指南》</a>。虽然MYCAT在很大程度上简化了数据库分片集群的开发与部署难度，但考虑到仍然存在一些特殊情况，比如项目工期紧，企业缺乏足够的时间和人力来全面研究MyCAT，因此为了更好的支持各类企业使用MYCAT实施项目，加速项目开发进度，如今MYCAT开源社区整合了一支强大的技术团队，以半年最低仅需5000元的赞助合作费用，向社会提供公益性的技术支持服务，以此加速MYCAT开源项目的发展，并且成为Apache第一个来自中国的顶级开源项目。</p>
+			<a href="./document/Mycat赞助商合同.doc" target="_blank"> Mycat赞助商合同</a>
 			<p>联系MYCAT官方合作请发邮件到：market@mycat.io</p>
 
-			<h3>MYCAT微信群</h3>
-			<img src="img/mycatgroup1.png" />
-			
-       </div>
-      </div>
-      <hr>
-       <footer>
+			<h3>Mycat高可用方案</h3>
+		    <img src="img/use3.png" />
+ 
+            <h3>MYCAT典型案例</h3>
+			<img src="img/mycatcase2.png" />
+ 
+</div>
+
+
+</div> <!-- /container -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./resources/jquery.js"></script>
+<script src="./resources/bootstrap.min.js"></script>
+<script src="./resources/jquery.validate.min.js"></script>
+<script>
+/*
+* Translated default messages for the jQuery validation plugin.
+* Language: CN
+* Author: Fayland Lam
+*/
+jQuery.extend(jQuery.validator.messages, {
+required: "必选字段",
+remote: "请修正该字段",
+email: "请输入正确格式的电子邮件",
+url: "请输入合法的网址",
+date: "请输入合法的日期",
+dateISO: "请输入合法的日期 (ISO).",
+number: "请输入合法的数字",
+digits: "只能输入整数",
+creditcard: "请输入合法的信用卡号",
+equalTo: "请再次输入相同的值",
+accept: "请输入拥有合法后缀名的字符串",
+maxlength: jQuery.validator.format("请输入一个长度最多是 {0} 的字符串"),
+minlength: jQuery.validator.format("请输入一个长度最少是 {0} 的字符串"),
+rangelength: jQuery.validator.format("请输入一个长度介于 {0} 和 {1} 之间的字符串"),
+range: jQuery.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+max: jQuery.validator.format("请输入一个最大为 {0} 的值"),
+min: jQuery.validator.format("请输入一个最小为 {0} 的值")
+});
+$.validator.defaults.errorElement = "p";
+$.validator.defaults.errorClass = "text-danger";
+$.validator.defaults.focusInvalid = false;
+</script>
+
+
+<div id="cli_dialog"></div>
+
+ <footer>
         <p>&copy; Company 2014 MYCAT<script language="javascript" type="text/javascript" src="http://js.users.51.la/17554127.js"></script>
 <noscript><a href="http://www.51.la/?17554127" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17554127.asp" style="border:none" /></a></noscript>，IDC 由 Marshy (QQ:334663212) 提供</p>
       </footer>
-    </div> <!-- /container -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+
+
+</body></html>
