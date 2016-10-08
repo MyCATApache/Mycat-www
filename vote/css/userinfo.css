@@ -1,0 +1,52 @@
+/*
+Theme Name: 柚子皮001
+Theme URI: http://www.yzipi.com
+
+Author: "韵"
+Author URI: http://www.yzipi.com
+
+Tags:www.yzipi.com,柚子皮模板，Orange,简约
+
+Description:柚子皮主题用了自适应网页设计的理念进行设计，在任何设备上都显示得完美无缺。
+Version: 5.61
+
+-------------------------------------------------------------- */
+
+@charset "utf-8";
+html {
+-webkit-text-size-adjust: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+	border: 0;
+	height: auto;
+	width: auto;
+}
+
+body {
+	font-family: "Microsoft Yahei", "冬青黑体简体中文 w3";
+	font-size: 13px;
+	background: #f8f8f8;
+	color: #656565;
+	letter-spacing: 0.5px;
+}
+a {
+	color: #666;
+	font-size: 13px;
+	text-decoration: none;
+	transition: color 0.1s;
+}
+a:hover {
+	color: #d6623d;
+}
+::selection{background:#d6623d;color:#fff;}
+
+.clear {
+	clear: both;
+}
