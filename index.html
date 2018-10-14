@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mycat</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<section class="container-fluid" style="height: 86px" >
+    <header class="navbar-fixed-top ">
+        <div class="mycat-header">
+            <nav class="navbar navbar-default mycat-nacbar-backimg ">
+                <div class="">
+                    <div class="mycat-navbar-logo">
+                        <a href="index.html"><img src="img/LOG-02.png"></a>
+                    </div>
+                    <div class="">
+                        <div class="navbar-header ">
+                            <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse mycat-navbar-content col-md-offset-3 " id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="mycat-padding-1rem"><a href="#">社区</a></li>
+                                <li class="mycat-padding-1rem"><a href="procase.html">产品</a></li>
+                                <li class="mycat-padding-1rem"><a href="#">文档</a></li>
+                                <li class="mycat-padding-1rem"><a href="#">下载</a></li>
+                                <li class="mycat-padding-1rem"><a href="donation.html">捐赠</a></li>
+                                <li class="mycat-padding-1rem"><a href="contribute.html">贡献榜</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </div>
+            </nav>
+        </div>
+    </header>
+</section>
+<!-- 背景图 -->
+<section class="item-centre-backimg container-fluid">
+    <div class="mycat-quickstart row  test-05 mycat-header-theme">
+        <div class=" mycat-text-sm-center col-md-12 ">
+            <button class="btn mycat-btn">快速上手</button>
+            <!-- 按钮触发模态框 -->
+            <button class="btn  mycat-btn" data-toggle="modal" data-target="#myModal">加入我们</button>
+        </div>
+    </div>
+</section>
+<!-- 产品优点 -->
+<section class="mycat-header-theme container-fluid">
+    <div class="row">
+        <span class="mycat-Advantage col-lg-2">
+            <h2>Mysql协议支持</h2>
+            <p>支持SQL92标准,遵守Mysql原生协议，跨语言，跨平台</p>
+        </span>
+        <span class="mycat-Advantage mycat-float-right col-lg-2">
+            <h2>支持1000亿大数据</h2>
+            <p>1000亿大表水平分片，集群并行计算</p>
+        </span>
+    </div>
+    <div class="row">
+        <h1 style="font-weight:800;color: #009ad6;">特点</h1>
+    </div>
+    <div class="row">
+        <span class="mycat-Advantage col-lg-2">
+            <h2>整合多种数据源</h2>
+            <p>支持前端作为MySQL通用代理，后端Mysql协议支持Mysql或JDBC方式支持Oracle、DB2、SQL Server 、 mongodb 、巨杉</p>
+        </span>
+        <span class="mycat-Advantage mycat-float-right col-lg-2">
+            <h2>自动故障切换</h2>
+            <p>基于Zookeeper下的集群的心跳的自动故障切换，支持读写分离，支持MySQL主从，以及galera cluster集群,Galera for MySQL集群，Percona Cluster或者MariaDB cluster</p>
+        </span>
+    </div>
+</section>
+<!-- 产品案例 -->
+<section class="mycat-procase-backcolor" style="text-align: center;">
+    <div class="">
+        <h1 class="mycat-procase-content">Mycat案例</h1>
+        <span><img src="img/case.png" style="display: inline-block; vertical-align: middle;"></span>
+    </div>
+</section>
+
+<!-- 尾部 -->
+<section class="mycat-height">
+    <div class="test-11 mycat-tail text-center">
+        <div class="partner-title mycat-partner-title">
+            <h1>Mycat</h1>
+            <p class="mycat-color-black">国内第一大开源社区发起，参与者超过10000人</p>
+            <p class="mycat-color-black">截止2016年，全国范围内超过600个成功案例，涵盖政府、金融、证券、互联网、物联网、电信、游戏等众多行业</p>
+            <p class="mycat-color-black">参与贡献者累计超过100人，活跃者几十人，不断有高手加入，版本更新快</p>
+        </div>
+    </div>
+</section>
+
+<!-- 底部导航 -->
+<section>
+    <div class="container-fluid test-10 mycat-procase-background col-xs-12">
+        <div class="row" >
+            <div class="col-xm-6">
+                <div class=" mycat-bottom-imgleft">
+                    <img src="img/LOG-02.png" style="height: 110px;width: 160px;">
+                </div>
+            </div>
+            <div>
+                <div class="mycat-bottom-itemright">
+                    <p>联系我们</p>
+                    <p>邮箱：294712221@qq.com</p>
+                    <p>QQ官方群：106088787</p>
+                    <p>QQ：294712221</p>
+                </div>
+            </div>
+        </div>
+        <div class="mycat-bottom-right">
+            <p>© 2018 Mycat 版权所有</p>
+        </div>
+    </div>
+</section>
+
+<!-- 弹窗 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content mycat-popc-backcolor">
+            <div class="modal-header mycat-noborder">
+                <button type="button" class="mycat-pop-close close " data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+            </div>
+            <div class="modal-body mycat-popc-backcolor mycat-pop-font">
+                <p><span>Mycat 是由中国众多资深IT工程师自发组成的优秀技术团队自愿无偿开发出来的全新的完全开源（Apache）的云端数据库。</span></p>
+                <p><span>不依托于任何一个商业公司，超越MySQL-Proxy和同类型中间件的新一代最强分布式数据库中间件系统，
+                    基于MySQL，支持智能分片算法等，实现分布式数据库产品的功能特征。</span></p>
+                <p><span>同时又规避传统分布式数据库产品的缺陷。深受各类商业应用公司的广泛应用，赢得各界好评</span></p>
+                <div class="modal-footer mycat-noborder mycat-pop-jion">
+                    <span>加入方式：<img src="img/u47.png" class="mycat-float-right"></span>
+                    <div><img src="img/u48.png "class="mycat-float-right mycat-pop-jionimg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
