@@ -1,0 +1,287 @@
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background: #494A5F;
+    color: #D5D6E2;
+    font-weight: 500;
+    font-size: 1.05em;
+    font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
+}
+a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
+a:hover,a:focus{color:#74777b;text-decoration: none;}
+.htmleaf-container{
+    margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.bg-demo{
+    background: #66677c;
+    padding-top: 1rem;
+}
+.ticker-headline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 25px 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.carousel.vertical .carousel-inner {
+    height: 100%;
+    width: auto;
+}
+.carousel.vertical .carousel-inner > .item {
+    width: auto;
+    padding-right: 50px;
+    -webkit-transition: 0.6s ease-in-out top;
+    transition: 0.6s ease-in-out top;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel.vertical .carousel-inner > .item {
+        -webkit-transition: 0.6s ease-in-out;
+        transition: 0.6s ease-in-out;
+    }
+    .carousel.vertical .carousel-inner > .item.next, .carousel.vertical .carousel-inner > .item.active.right {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        top: 0;
+    }
+    .carousel.vertical .carousel-inner > .item.prev, .carousel.vertical .carousel-inner > .item.active.left {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        top: 0;
+    }
+    .carousel.vertical .carousel-inner > .item.next.left, .carousel.vertical .carousel-inner > .item.prev.right, .carousel.vertical .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        top: 0;
+    }
+}
+.carousel.vertical .carousel-inner > .active,
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+    display: block;
+}
+.carousel.vertical .carousel-inner > .active {
+    top: 0;
+}
+.carousel.vertical .carousel-inner > .next,
+.carousel.vertical .carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.carousel.vertical .carousel-inner > .next {
+    top: 100%;
+}
+.carousel.vertical .carousel-inner > .prev {
+    top: -100%;
+}
+.carousel.vertical .carousel-inner > .next.left,
+.carousel.vertical .carousel-inner > .prev.right {
+    top: 0;
+}
+.carousel.vertical .carousel-inner > .active.left {
+    top: -100%;
+}
+.carousel.vertical .carousel-inner > .active.right {
+    top: 100%;
+}
+
+.carousel.vertical .carousel-control {
+    left: auto;
+    width: 50px;
+}
+.carousel.vertical .carousel-control.up {
+    top: 25px;
+    right: 180px;
+    bottom: 50%;
+
+}
+.carousel.vertical .carousel-control.down {
+    top: 650px;
+    right: 180px;!important;
+    bottom: 0;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-up,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+.carousel.vertical .carousel-control .icon-prev,
+.carousel.vertical .carousel-control .glyphicon-chevron-up {
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-next,
+.carousel.vertical .carousel-control .glyphicon-chevron-down {
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -10px;
+}
+.carousel.vertical .carousel-control .icon-up,
+.carousel.vertical .carousel-control .icon-down {
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    font-family: serif;
+}
+.carousel.vertical .carousel-control .icon-prev:before {
+    content: '\2039';
+}
+.carousel.vertical .carousel-control .icon-next:before {
+    content: '\203a';
+}
+
+/* 开发历程 */
+/**中间**/
+.mycat-item-product-bakimg{
+    top: 0;
+    background-color: #ffffff;
+    height: 583px;
+    width: 100%;
+    background-size: cover;
+}
+.mycat-experience{
+    background-color: #ffffff;
+}
+.mycat-product-fontt{
+    color: black;
+    margin: 13rem 25rem;
+}
+.mycat-product-font-1rem{
+    /* 行间距 */
+    line-height: 1rem;
+    color: black;
+}
+.mycat-product-btn{
+    border-radius:25px;
+    width: 150px;
+    height: 50px;
+    margin: 20px 55px;
+    text-align:center;
+    padding:10px 40px;
+    background:#dddddd;
+    -moz-border-radius:25px;
+}
+.mycat-product-sm-center{
+    /*图片偏下居中*/
+    display: block;
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 500ms ease-in-out 0s;
+    margin-top: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+.tab {
+    width: 100%;
+    background-size: cover;
+}
+.tab .box {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/**
+.tab .box .menus
+.tab .box .menus li
+改变上面两个高和宽，就是改变右边栏目的高和宽
+ */
+.tab .box .menus {
+    width: 400px;
+    height: 700px;
+    float: right;
+    margin-top: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+.tab .box .menus li {
+    width: 400px;
+    height: 150px;
+    background: rgb(92,94,103);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    line-height: 70px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.tab .box .menus li:nth-child(4) {
+    border-bottom: none;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+}
+.tab .box .bg {
+    height: 110px !important;
+    background: rgb(0,159,233) !important;
+    line-height: 110px !important;
+}
+
+/**
+  .tab .right
+  .tab .tab_right
+  左边内容的样式
+ */
+.tab .right {
+    float: left;
+    width: 800px;
+    margin-top: 25px;
+    height: 700px;
+    overflow: hidden;
+}
+.tab .tab_right {
+    width: 800px;
+    height: 800px;
+    color: #fff;
+    text-align: center;
+    position:relative;
+}
+.tab .tab_right img {
+    width: 100%;
+    position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        left: 0;
+}
+.tab .scroll {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
