@@ -388,7 +388,7 @@ a:hover {
   </div>
   <div id="userinfo5" class="usercls" style="color:#fff;" >
 	  <div style="float:left;width: 20%;margin: 0;padding: 0;"><div><h4>作者简介：</h4><br/>已经做Java十六年了，拿过Oracle OCP。在公司主要负责系统架构，爱好接受新鲜事务，玩过python,ruby,css，js，android，html5。八字，风水，中医也都有研究。
-年纪虽长，但入门Mycat算最晚。幸得Leader us的信任，负责Mycat eye的核心开发。希望能在Mycat社区共享自己的一份力。也打个小广告，在上海，有想招人的请联系我，QQ:1935326097</div></div>	  
+年纪虽长，但入门Mycat算晚。幸得Leader us的信任，负责Mycat eye的核心开发。希望能在Mycat社区共享自己的一份力。也打个小广告，在上海，有想招人的请联系我，QQ:1935326097</div></div>
 	  <div style="float:left;width: 15%;margin-top:0px;">
 	     <div style="font-size: 13px;" >
 		     <small ></small><small ><strong>作者：</strong>
